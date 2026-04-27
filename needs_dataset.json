@@ -1,0 +1,26 @@
+[
+  {
+    "id": "N-001",
+    "category": "Food Shortage",
+    "urgency": "High",
+    "location": { "lat": 34.0532, "lng": -118.2427 },
+    "description": "Shelter Cntr. - Running out of clean water and basic food supplies for 50 people.",
+    "required_skills": ["Logistics", "Nutrition"]
+  },
+  {
+    "id": "N-002",
+    "category": "Medical Emergency",
+    "urgency": "Critical",
+    "location": { "lat": 34.0622, "lng": -118.2737 },
+    "description": "Makeshift clinic needs immediate triage assistance and medical supplies.",
+    "required_skills": ["Medical", "First Aid", "Logistics"]
+  },
+  {
+    "id": "N-003",
+    "category": "Structural Damage",
+    "urgency": "Medium",
+    "location": { "lat": 34.0822, "lng": -118.2237 },
+    "description": "Debris clearing required to establish a safe pathway for supply trucks.",
+    "required_skills": ["Heavy Machinery", "Engineering"]
+  }
+]

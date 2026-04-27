@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Resource Allocation</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- App Navigation -->
+    <nav class="top-nav">
+      <div class="logo">
+        <i class="fa-solid fa-hands-holding-circle"></i>
+        <span>Smart Resource Allocation</span>
+      </div>
+      <div class="nav-links">
+        <button class="nav-btn active" data-target="dashboard">Coordinator Dashboard</button>
+        <button class="nav-btn" data-target="ingestion">Data Ingestion</button>
+        <button class="nav-btn" data-target="mobile">Mobile View</button>
+      </div>
+      <div class="user-profile">
+        <img src="https://i.pravatar.cc/150?img=11" alt="User" class="avatar">
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="app-container">
+      
+      <!-- View 1: Main Coordinator Dashboard -->
+      <section id="dashboard" class="view-section active">
+        <div class="dashboard-grid">
+          
+          <!-- Left Column -->
+          <div class="col col-left glass-panel">
+            <h2 class="panel-title">Data Sources</h2>
+            <div class="status-indicator">
+              <div class="status-header">
+                <span>Field Surveys</span>
+                <span class="status-percent">78%</span>
+              </div>
+              <div class="progress-bar"><div class="progress" style="width: 78%"></div></div>
+            </div>
+            <div class="status-indicator">
+              <div class="status-header">
+                <span>PDF Reports</span>
+                <span class="status-icon processing"><i class="fa-solid fa-arrows-rotate fa-spin"></i> Processing</span>
+              </div>
+            </div>
+            <div class="status-indicator">
+              <div class="status-header">
+                <span>External API Calls</span>
+                <span class="status-icon"><i class="fa-solid fa-chart-line"></i> Active</span>
+              </div>
+            </div>
+
+            <h2 class="panel-title mt-4">Analyzed Community Needs</h2>
+            <div class="node-graph">
+              <div class="nodes-container">
+                <div class="node pulse"><i class="fa-solid fa-file-lines"></i></div>
+                <div class="line"></div>
+                <div class="node pulse"><i class="fa-solid fa-tower-broadcast"></i></div>
+                <div class="line"></div>
+                <div class="node central-node"><i class="fa-solid fa-database"></i> Structured Data</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center Column -->
+          <div class="col col-center">
+            <div class="map-container relative">
+              <div class="map-overlay">
+                <!-- Heatmap abstraction -->
+                <div class="heatmap-blob blob-1"></div>
+                <div class="heatmap-blob blob-2"></div>
+                <div class="heatmap-blob blob-3"></div>
+                
+                <!-- Pins -->
+                <div class="map-pin pin-1">
+                  <div class="pin-marker red"></div>
+                  <div class="tooltip-card open">
+                    <h4>Shelter Cntr. - Food Shortage</h4>
+                    <p class="urgency high">High Urgency</p>
+                    <p class="skills"><strong>Required:</strong> Logistics, Nutrition</p>
+                  </div>
+                </div>
+                <div class="map-pin pin-2">
+                  <div class="pin-marker orange"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col col-right glass-panel">
+            <h2 class="panel-title">Available Volunteers</h2>
+            <div class="filters">
+              <select><option>Skill: All</option><option>Logistics</option><option>Medical</option></select>
+              <select><option>Proximity: < 5 mi</option></select>
+              <select><option>Status: Available</option></select>
+            </div>
+            <div class="volunteer-list">
+              <div class="volunteer-card selected">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Sarah" class="vol-avatar">
+                <div class="vol-info">
+                  <h4>Sarah J.</h4>
+                  <p>Logistics, Driver</p>
+                  <span class="distance">1.2 mi away</span>
+                </div>
+              </div>
+              <div class="volunteer-card">
+                <img src="https://i.pravatar.cc/150?img=8" alt="David" class="vol-avatar">
+                <div class="vol-info">
+                  <h4>David M.</h4>
+                  <p>Nutrition, First Aid</p>
+                  <span class="distance">3.4 mi away</span>
+                </div>
+              </div>
+            </div>
+            <div class="match-engine mt-4">
+              <h2 class="panel-title">Smart Match Engine</h2>
+              <div class="match-visual">
+                <div class="match-item vol-node"><img src="https://i.pravatar.cc/150?img=5" alt="Sarah"></div>
+                <div class="match-score">
+                  <span class="score-badge">94% Match</span>
+                  <div class="animated-line"></div>
+                </div>
+                <div class="match-item task-node"><i class="fa-solid fa-box-open"></i></div>
+              </div>
+              <button class="btn-primary mt-2">Deploy Volunteer</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- View 2: Data Ingestion & Annotation -->
+      <section id="ingestion" class="view-section hidden">
+        <div class="ingestion-split">
+          
+          <!-- Left: Raw Input -->
+          <div class="col col-raw glass-panel">
+            <h2 class="panel-title">Raw Input Viewer</h2>
+            <div class="document-viewer">
+              <div class="document-mockup">
+                <div class="doc-header">Field Survey Form</div>
+                <div class="doc-body">
+                  <p>Date: 10/24/2023</p>
+                  <div class="bounding-box selected">
+                    <span class="label">Location</span>
+                    <p class="handwriting">Downtown Community Center</p>
+                  </div>
+                  <p>Reported By: John Doe</p>
+                  <div class="bounding-box warning">
+                    <span class="label">Urgent Need</span>
+                    <p class="handwriting">Running out of clean water for 50 people.</p>
+                  </div>
+                </div>
+                <!-- Scanning overlay effect -->
+                <div class="scan-line"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Structured Output -->
+          <div class="col col-structured glass-panel">
+            <div class="flex-header">
+              <h2 class="panel-title">Extracted Structured Data</h2>
+              <span class="confidence-badge"><i class="fa-solid fa-check-circle"></i> Confidence Score: 88%</span>
+            </div>
+            
+            <form class="structured-form">
+              <div class="form-group">
+                <label>Category</label>
+                <select>
+                  <option>Water & Sanitation</option>
+                  <option>Food Supply</option>
+                  <option>Medical Emergency</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label>Severity Level</label>
+                <input type="range" min="1" max="5" value="4" class="severity-slider">
+                <div class="slider-labels">
+                  <span>Low</span>
+                  <span>Critical</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Geo-coordinates</label>
+                <input type="text" value="34.0522 N, 118.2437 W" class="input-field">
+              </div>
+
+              <div class="form-group">
+                <label>Extracted Notes</label>
+                <textarea rows="3">Running out of clean water for 50 people.</textarea>
+              </div>
+
+              <div class="action-footer">
+                <button type="button" class="btn-primary large-btn"><i class="fa-solid fa-cloud-arrow-up"></i> Verify & Push to Mapping Engine</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- View 3: Volunteer Mobile View -->
+      <section id="mobile" class="view-section hidden">
+        <div class="mobile-mockup-wrapper">
+          <div class="mobile-device">
+            
+            <!-- Mobile Header -->
+            <div class="mobile-header">
+              <div class="greeting">
+                <h1>Welcome back, Sarah! 👋</h1>
+                <p>Your Impact: <strong>12 Hours Volunteered</strong></p>
+              </div>
+              <img src="https://i.pravatar.cc/150?img=5" alt="Sarah" class="mobile-avatar">
+            </div>
+
+            <!-- Mobile Content -->
+            <div class="mobile-content">
+              <h3 class="section-title">Recommended Missions</h3>
+              
+              <!-- Carousel -->
+              <div class="mission-carousel">
+                <div class="mission-card expanded">
+                  <div class="match-tag">94% Match</div>
+                  <h4>Weekend Tutoring at Urban School</h4>
+                  <p class="distance"><i class="fa-solid fa-location-dot"></i> 1.2 miles away</p>
+                  
+                  <div class="mobile-map-snippet">
+                    <div class="mini-pin"></div>
+                  </div>
+                  
+                  <button class="btn-primary mobile-btn">Accept Mission</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav">
+              <div class="nav-item active"><i class="fa-solid fa-house"></i><span>Home</span></div>
+              <div class="nav-item"><i class="fa-solid fa-list-check"></i><span>My Tasks</span></div>
+              <div class="nav-item"><i class="fa-solid fa-comment-dots"></i><span>Messages</span></div>
+              <div class="nav-item"><i class="fa-solid fa-user"></i><span>Profile</span></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

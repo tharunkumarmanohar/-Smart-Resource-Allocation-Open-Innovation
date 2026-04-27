@@ -1,0 +1,47 @@
+[
+  {
+    "id": "V-001",
+    "name": "Sarah Jenkins",
+    "skills": ["Logistics", "Driver", "Heavy Machinery"],
+    "location": { "lat": 34.0522, "lng": -118.2437 },
+    "distance_mi": 1.2,
+    "status": "Available",
+    "experience_level": "Expert"
+  },
+  {
+    "id": "V-002",
+    "name": "David Miller",
+    "skills": ["Nutrition", "First Aid", "CPR"],
+    "location": { "lat": 34.0822, "lng": -118.2637 },
+    "distance_mi": 3.4,
+    "status": "Available",
+    "experience_level": "Intermediate"
+  },
+  {
+    "id": "V-003",
+    "name": "Elena Rodriguez",
+    "skills": ["Medical", "Translation", "Counseling"],
+    "location": { "lat": 34.0411, "lng": -118.2937 },
+    "distance_mi": 5.1,
+    "status": "Deployed",
+    "experience_level": "Expert"
+  },
+  {
+    "id": "V-004",
+    "name": "Marcus Johnson",
+    "skills": ["Search and Rescue", "Logistics", "Communications"],
+    "location": { "lat": 34.0722, "lng": -118.2037 },
+    "distance_mi": 2.8,
+    "status": "Available",
+    "experience_level": "Advanced"
+  },
+  {
+    "id": "V-005",
+    "name": "Anita Patel",
+    "skills": ["Water & Sanitation", "Engineering"],
+    "location": { "lat": 34.1022, "lng": -118.2137 },
+    "distance_mi": 8.0,
+    "status": "Available",
+    "experience_level": "Expert"
+  }
+]
